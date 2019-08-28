@@ -14,9 +14,25 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         title: Text(
           "Event Manager",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black,fontSize: 20.0),
         ),
-        elevation: 2.0,
+        elevation: 5.0,
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: ListView.builder(itemBuilder: (BuildContext context, int pos) {
+          return Card(
+            elevation: 8,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  "Name of Event",
+                  style: TextStyle(color: Colors.black,fontSize: 16.0),
+                )
+              ],
+            ),
+          );
+        }),
       ),
     );
   }
